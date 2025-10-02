@@ -80,6 +80,7 @@ for name, model in models.items():
     plt.show()
 
 joblib.dump(models['RandomForest'], 'models/RandomForestClassifier.sav')
+joblib.dump(models['LogisticRegression'], 'models/LogisticRegression.sav')
 joblib.dump(vectorizer, 'models/vectorizer.sav')
 joblib.dump(category_to_num, 'models/category_to_num.sav')
 
