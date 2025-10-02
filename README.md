@@ -1,0 +1,1 @@
+Classifies e-commerce product descriptions into categories: Electronics, Household, Books, Clothing & Accessories.
