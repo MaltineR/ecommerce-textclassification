@@ -1,5 +1,6 @@
 import joblib
-from preprocess import preprocess_text
+from .preprocess import preprocess_text
+
 
 
 clf = joblib.load('models/RandomForestClassifier.sav')
