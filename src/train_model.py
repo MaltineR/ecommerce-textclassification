@@ -19,3 +19,32 @@ df = preprocess_dataframe(df)
 
 category_to_num = {cat: idx for idx, cat in enumerate(df['category'].unique())}
 df['category_num'] = df['category'].map(category_to_num)
+
+def plot_category_distribution(df):
+    counts = df['category'].value_counts()
+    plt.figure(figsize=(7,5))
+    counts.plot(kind='bar')
+    plt.title("Number of samples per category")
+    plt.ylabel("Count")
+    plt.show()
+
+plot_category_distribution(df)
+
+
+def plot_wordcloud(df, category_name):
+    text = ' '.join(df[df['category'] == category_name]['processed_desc'])
+    wc = WordCloud(background_color='white', max_words=50)
+    plt.figure(figsize=(7,7))
+    plt.imshow(wc.generate(text))
+    plt.axis('off')
+    plt.title(category_name)
+    plt.show()
+
+for cat in df['category'].unique():
+    plot_wordcloud(df, cat)
+
+
+vectorizer = TfidfVectorizer(max_features=5000)
+X = vectorizer.fit_transform(df['processed_desc'])
+y = df['category_num']
+
