@@ -71,7 +71,7 @@ for name, model in models.items():
 
     cm = confusion_matrix(y_test, y_pred)
     plt.figure(figsize=(6,6))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+    sns.heatmap(cm, annot=True, fmt='d', cmap='YlOrRd',
                 xticklabels=category_to_num.keys(),
                 yticklabels=category_to_num.keys())
     plt.title(f'{name} Confusion Matrix')
