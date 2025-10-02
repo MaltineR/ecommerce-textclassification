@@ -13,9 +13,8 @@ StopWords = set(stopwords.words('english'))
 stemmer = PorterStemmer()
 
 def load_data(file_path='data/ecommerceDataset.csv'):
-    # Load CSV without headers
     df = pd.read_csv(file_path, names=['category', 'description'], header=None)
-    df.dropna(inplace=True)  # Drop missing descriptions
+    df.dropna(inplace=True)
     df['category'] = df['category'].str.replace('&', '_').str.replace(' ', '_')
     return df
 def preprocess_text(text):
