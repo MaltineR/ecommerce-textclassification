@@ -68,5 +68,15 @@ for name, model in models.items():
     acc = accuracy_score(y_test, y_pred)
     print(f"Accuracy: {acc:.4f}")
     print("Classification Report:\n", classification_report(y_test, y_pred))
+
+    cm = confusion_matrix(y_test, y_pred)
+    plt.figure(figsize=(6,6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                xticklabels=category_to_num.keys(),
+                yticklabels=category_to_num.keys())
+    plt.title(f'{name} Confusion Matrix')
+    plt.xlabel('Predicted')
+    plt.ylabel('Actual')
+    plt.show()
     
    
