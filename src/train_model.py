@@ -48,3 +48,8 @@ vectorizer = TfidfVectorizer(max_features=5000)
 X = vectorizer.fit_transform(df['processed_desc'])
 y = df['category_num']
 
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.15, stratify=y, random_state=42
+)
+
+print(f'Training samples: {X_train.shape[0]}, Testing samples: {X_test.shape[0]}')
