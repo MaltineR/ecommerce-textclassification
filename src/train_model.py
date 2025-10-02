@@ -78,5 +78,10 @@ for name, model in models.items():
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
     plt.show()
-    
+
+joblib.dump(models['RandomForest'], 'models/RandomForestClassifier.sav')
+joblib.dump(vectorizer, 'models/vectorizer.sav')
+joblib.dump(category_to_num, 'models/category_to_num.sav')
+
+print("\nModels and vectorizer saved successfully!")   
    
