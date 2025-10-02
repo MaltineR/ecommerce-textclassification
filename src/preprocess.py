@@ -18,3 +18,12 @@ def load_data(file_path='data/ecommerceDataset.csv'):
     df.dropna(inplace=True)  # Drop missing descriptions
     df['category'] = df['category'].str.replace('&', '_').str.replace(' ', '_')
     return df
+def preprocess_text(text):
+    text_cleaned = re.sub(r"[^\w\s']", '', text).lower()
+    tokens = word_tokenize(text_cleaned)
+    tokens = [stemmer.stem(w) for w in tokens if w not in StopWords and w not in string.punctuation]
+    return ' '.join(tokens)
+
+def preprocess_dataframe(df):
+    df['processed_desc'] = df['description'].apply(preprocess_text)
+    return df
