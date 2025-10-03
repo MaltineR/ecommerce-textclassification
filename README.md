@@ -37,26 +37,30 @@ Example of testing the `/predict` endpoint using Postman.
 ![API Test](images/PostmanAPI.png)
 
 # How to Run the Project
+
+### 1. Clone the repository
 ```bash
 git clone https://github.com/MaltineR/ecommerce-textclassification.git
-cd E-commerce-Text-Classification
+cd E-commerce-Text-Classification 
+```
 
-# Create a virtual environment and install dependencies
+### 2. Create a virtual environment and install dependencies
 
 ```bash
 python -m venv env
 env\Scripts\activate
 pip install **dependencies needed**
+```
 
-# Train model 
+### 3.Train model 
 
 -python src/train_model.py
  
-# Run the API
+### 4.Run the API
 
 -python app.py
 
-# Results
+## Results
 - **Random Forest** achieved ~97.5% accuracy.  
 - **Logistic Regression** achieved ~96.5% accuracy.  
 - The **prediction script (`predict.py`) uses the trained Random Forest model** to classify new product descriptions.
