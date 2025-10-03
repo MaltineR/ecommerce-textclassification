@@ -34,17 +34,19 @@ The confusion matrix for the **Logistic Regression** model
 # API Testing
 Example of testing the `/predict` endpoint using Postman.
 
-![API Test](images/Postman.png)
+![API Test](images/PostmanAPI.png)
 
 # How to Run the Project
-1. Clone the repository:
--git clone https://github.com/MaltineR/ecommerce-textclassification.git
--cd E-commerce-Text-Classification
+```bash
+git clone https://github.com/MaltineR/ecommerce-textclassification.git
+cd E-commerce-Text-Classification
 
 # Create a virtual environment and install dependencies
 
--python -m venv env
--env\Scripts\activate  
+```bash
+python -m venv env
+env\Scripts\activate
+pip install **dependencies needed**
 
 # Train model 
 
@@ -55,9 +57,10 @@ Example of testing the `/predict` endpoint using Postman.
 -python app.py
 
 # Results
--Random Forest achieved ~97.5% accuracy.
--Logistic Regression achieved ~96.5% accuracy.
--The **prediction script (`predict.py`) uses the trained Random Forest model** to classify new product descriptions. 
+- **Random Forest** achieved ~97.5% accuracy.  
+- **Logistic Regression** achieved ~96.5% accuracy.  
+- The **prediction script (`predict.py`) uses the trained Random Forest model** to classify new product descriptions.
 
+---
 
 Maltine Rama
