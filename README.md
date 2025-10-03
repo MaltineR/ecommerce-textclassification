@@ -53,12 +53,14 @@ pip install **dependencies needed**
 ```
 
 ### 3.Train model 
-
--python src/train_model.py
+```bash
+python src/train_model.py
+```
  
 ### 4.Run the API
-
--python app.py
+```bash
+python app.py
+```
 
 ## Results
 - **Random Forest** achieved ~97.5% accuracy.  
