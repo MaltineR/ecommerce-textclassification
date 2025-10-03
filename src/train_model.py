@@ -22,13 +22,21 @@ df['category_num'] = df['category'].map(category_to_num)
 
 def plot_category_distribution(df):
     counts = df['category'].value_counts()
-    plt.figure(figsize=(7,5))
-    counts.plot(kind='bar')
-    plt.title("Number of samples per category")
-    plt.ylabel("Count")
+
+    plt.figure(figsize=(7,7))
+    counts.plot(
+        kind='pie',
+        autopct='%1.1f%%',       
+        startangle=90,           
+        colors=['red', 'green', 'purple', 'orange']  
+    )
+
+    plt.title("Category Distribution")
+    plt.ylabel("")  
     plt.show()
 
 plot_category_distribution(df)
+
 
 
 def plot_wordcloud(df, category_name):
