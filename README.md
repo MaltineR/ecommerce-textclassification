@@ -16,7 +16,7 @@ Below is a pie chart showing the distribution of samples across product categori
 
 ![Category Distribution](images/CagetoryDistribution.png)
 
-# Word Cloud
+# Word Cloud-the most frequent words
 Here’s an example of a word cloud for the **Books**,showing the most frequent words.
 
 ![Word Cloud - Books](images/WordCloud.png)
@@ -38,26 +38,26 @@ Example of testing the `/predict` endpoint using Postman.
 
 # How to Run the Project
 1. Clone the repository:
-   git clone https://github.com/MaltineR/ecommerce-textclassification.git
-   cd E-commerce-Text-Classification
+-git clone https://github.com/MaltineR/ecommerce-textclassification.git
+-cd E-commerce-Text-Classification
 
 # Create a virtual environment and install dependencies
 
-python -m venv env
-env\Scripts\activate  
+-python -m venv env
+-env\Scripts\activate  
 
 # Train model 
 
-python src/train_model.py
+-python src/train_model.py
  
 # Run the API
 
-python app.py
+-python app.py
 
 # Results
-Random Forest achieved ~97.5% accuracy.
-Logistic Regression achieved ~96.5% accuracy.
-The **prediction script (`predict.py`) uses the trained Random Forest model** to classify new product descriptions. 
+-Random Forest achieved ~97.5% accuracy.
+-Logistic Regression achieved ~96.5% accuracy.
+-The **prediction script (`predict.py`) uses the trained Random Forest model** to classify new product descriptions. 
 
 
 Maltine Rama
